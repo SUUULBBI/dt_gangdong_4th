@@ -1,0 +1,113 @@
+
+<!DOCTYPE html html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> hello world</title>
+
+        <!--class 명명해주면 계속해서 사용할 수 있고, 해당 class로 동일하게 묶인 것의 css를 동일하게 써줄 수 있음.
+        사용법 : <span class="fruit">오렌지 
+            -> fruit로 명명해주면 fruit으로 명명된 모든 텍스트가 동일한 css 받음
+            
+            **id는 하나만 가질 수 있고 , css에서 id는 #으로 함... 무슨말,,,, -->
+        <style>
+            p{
+                color:red;
+            }
+            div{
+                color:blue;
+            }
+
+            .orange{
+                color:blueviolet;
+                #fruit{
+                    color:aqua;
+                }
+            }
+
+
+            li.class1{
+                color:yellowgreen;
+            }
+            span.class1{
+                background-color: black;
+            }
+            div.class2{
+                background-color: yellow;
+            }
+            ul >.class1{
+                background-color: red;
+            }
+            div .class1{
+                background-color: aqua;
+            }
+            .class2 + div{
+                color:orange;
+            }
+            .class2 ~ div{
+                background-color:deeppink;
+            }
+
+        </style>
+    </head>
+    <!--금요일 수업 시작 -->
+
+    <body>
+        <h3 style="background-color:black; color:white; width:70px;">무지개</h3>
+        <div style="background-color:red; width:50px; height:50px"></div>
+        <div style="background-color:orange; width:100px; height:50px"></div>
+        <div style="background-color:yellow; width:150px; height:50px"></div>
+        <div style="background-color:green; width:200px; height:50px"></div>
+        <div style="background-color:blue; width:250px; height:50px"></div>
+        <div style="background-color:navy; width:300px; height:50px"></div>
+        <div style="background-color:purple; width:350px; height:50px"></div>
+    </body>
+    
+    <!--개발자 옵션에서 css 없애는 명령어 console에서 사용 / 
+            작성 내용 : document.head.parentNode.removeChild(document.head)
+    -->
+    
+    
+    
+        <body>
+            <h3 style="background-color:black; color:white; width:70px;">무지개</h3>
+             p{color: red; padding: 5px;}무지개
+    
+    
+        </body>
+    
+        <body>
+            <div>
+                <ul>
+                    <li>사과</li>
+                    <li>딸기</li>
+                    <li>오렌지</li>
+                </ul>
+                <div id="fruit">당근</div>
+                <p>토마토</p>
+                <span>오렌지1</span>
+                <span class="orange">오렌지2</span>
+            </div>
+
+
+
+
+            <div>
+                <ul>
+                    <li>사과</li>
+                    <li>딸기</li>
+                    <li class="class1">오렌지</li>
+                    <div class="class2">당근3</div>
+
+                </ul>
+
+                    <div class="class3">당근1</div>
+                    <div class="class2">당근2</div>
+                    <div class="class1">당근3</div>
+                    <div class="class1">당근4</div>
+
+                    <span class="class1">오렌지2</span>
+
+            </div>
+        </body>
+</html>

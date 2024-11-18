@@ -1,0 +1,138 @@
+.div1 {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+/* mathod
+     : hover 
+     => 요소에 마우스를 올렸을 때 (->가상상황) ㅇㅇㅇ을 해줘.
+*/
+.div1:hover {
+    background-color: hotpink;
+    width: 150px;
+    height: 150px;
+}
+
+
+/* 
+    active: 
+    => 요소를 마우스로 클릭하고 있을 때 ㅇㅇ해줘. / click 때만 적용됨.
+    
+    */
+.div1:active {
+    background-color: brown;
+    width: 200px;
+}
+
+/* 
+    :focus
+    => 요소에 포커스되었을 때 ㅇㅇ해줘.
+    */
+input:focus {
+    background-color: violet;
+    color: lightblue;
+    outline-color: yellowgreen;
+}
+
+/* 링크 자식들이 모두 호버될때마다 bg색 넣어줘. */
+.links > a:hover{
+    background-color: coral;
+}
+
+/* 방문했던 링크는 방문한 것이 맞다면 색을 넣어줘. */
+.links > a:visited {
+    color: red;
+}
+
+
+/* 요소 상황에 따른 가상 클래스 선택자 */
+/* zoo 내 모든 자식에게 효과를 넣어줘. */
+.zoo > * {
+    background-color: green;
+    color: white;
+}
+
+/* 
+    #1. E(element):first-child
+    => elemetn가 첫번째 요소라면
+*/
+.zoo > *:first-child {
+    background-color: red;
+}
+
+/* 
+    #2. Element:last-child
+    => 요소가 마지막 요소라면
+*/
+.zoo > *:last-child {
+    background-color: black;
+}
+
+
+/* 
+    #3. element:nth-child(n)
+    => 요소가 n번째 요소라면
+    n에 수식을 넣을 수 있음 .ex 2n, 2n+2
+*/
+
+.zoo > *:nth-child(2) {
+    background-color: aqua;
+}
+
+.zoo > *:nth-child(2n-1) {
+    background-color: orange;
+}
+
+
+/* 
+    #4. element:not(xyz) 
+    => xyz가 아닌 요소만 선택해줘.
+
+    *단, not으로 한 애들은 적용된 것이 없는 애들만 적용됨. > 이미 이전에 지정된 애들이 먼저 더 쎄게 적용됨. / 
+*/
+.zoo > *:not(div) {
+    background-color: pink;
+}
+
+
+/* 실습 문제
+여기요 앞에 '택시' 넣기 / 여기요 뒤에 '빨리' 넣기 
+
+단, !important : 먼저 적용해달라는 코드인데, 남용하면 안됨. 되도록 사용하지 말기.
+*/
+
+.box::before {
+    content: "택시";
+    color: red;
+}
+.box::after {
+    content: "빨리";
+    color: blue !important;
+}
+
+
+.box::after {
+    content: "빨리";
+    color: green;
+}
+
+
+
+/* 
+    속성 선택자
+*/
+[disabled] {
+    background-color: aqua;
+    color: red;
+}
+[type="password"] {
+    color: blue;
+    background-color: lightcoral;
+}
+
+[placeholder] {
+    background-color: black;
+    color: beige;
+}
+

@@ -1,0 +1,56 @@
+/* 하위(후손) 선택자 : 공백(띄어쓰기)  
+다음3번에 쓴 내용이 body 태그와 section태그 모두를 말함. */
+body section {
+    /* 테두리(경계선) : 두께 선스타일 선택상 */
+    border: 1px solid blue;
+}
+
+body section h2 {
+    border: 2px; solid green;
+}
+
+/* 자식 선택자 : > (오른쪽 꺽새사용) */
+.first > h2 {
+    color: white;
+    background-color: navy;
+}
+
+.second > h2 {
+    color:navy;
+    background-color: white;
+}
+
+/* 인접 형제 선택자 : + 사용 */
+/*  주의사항 : 위플래시라는 아이디를 갖는 요소 바로뒤에 li 태그를 갖는 형제가 바로 있어야함. 
+      ㄴ 만약 바로 다음에 li 가 없으면 적용안됨. */
+#위플래시 + li {
+    background-color: aqua;
+}
+
+/* 일반 형제 선택자 : ~ 
+      ㄴ 만약 이어진 전체 선택하고 싶으면 * 쓰면 됨. 
+       ㄴ ex. #위플래시 ~ *   
+       */
+#위플래시 ~ li {
+    color: brown;
+}
+
+
+/* CSS 색상 */
+/* 
+    #1. 색상 키워드 : red, aqua, blue,,,
+    #2. 16진수 코드 가능 ex. #XXXXXX
+        0~9, a,b,c,d,e,f : 16개의 기호로 표현.
+        - #ffffff : red(ff), Green(ff), blue(ff) -> white
+        - #000000 : red(00), green(00), blue(00) -> black    
+    #3. rgb(0~255, 0~255, 0~255) 
+    - rgb(255,255,255) : white
+    - rgb(0,0,0) : black
+
+*/
+
+
+
+
+
+

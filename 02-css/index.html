@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- css참조방식3. 링크방식 -->
+    <link rel="stylesheet" href="./index.css">
+
+    <!-- css참조방식2. 내장방식 -->
+    <style>
+        ul{
+            background-color: aqua;
+        }
+
+        /* 다른 태그에 같은 스타일 적용 , 그리고 h1의 경우 인라인된 style이 있어서 그게 최종으로 적용되어 핑크가 아닌 블루색으로 나옴.*/
+        h1, h2{
+            color: pink;
+        }
+    </style>    
+
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 참조방식</title>
+</head>
+<body>
+
+    <!-- css 참조방식 1. 인라인 방식 -->
+    <h1 style="color:blue;">CSS 사용방법을 익혀봅시다.</h1>
+    <h2 style="font-size: larger">Hello world!</h2>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+
+
+
+</body>
+</html>

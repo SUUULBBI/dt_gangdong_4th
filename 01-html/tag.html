@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag 종류</title>
+</head>
+<body>
+    <h1>Tag 종류에 대해 배워보자!</h1>
+    <h2>두번째로 큰 제목 </h2>
+    <h3> 세번째로 큰 제목</h3>
+    <h4>4번째로 큰 제목</h4>
+    <h5>5번째로 큰 제목</h5>
+    <h6>6번째로 큰 제목</h6>
+    <!-- h7태그는 존재하지 않음. h1~h6까지만 있음 -->
+
+    <p>여기는 본문 영역. ~~~~~~</p>
+    <br  />
+    <br  />
+    <br  />
+    <p>여기도 본문 영역~~~</p>
+
+    <h3>오늘의 할 일</h3>
+    <!--  ul tag type attribute : disc(default), square, circle, none -->
+
+    <ul type="square">
+        <li>Html study</li>
+        <li>Html study</li>
+        <li>Html study</li>
+    </ul>
+    <ul type="circle">
+        <li>Html study</li>
+        <li>Html study</li>
+        <li>Html study</li>
+    </ul>
+
+    <h3>아이스커피 레시피</h3>
+    <!--ol tag type attribute : 1(default), a, A, i, I -->
+    <!-- start attr : 시작 번호, reversed : 역순으로 -->
+    <ol type="1" start="9" reversed>
+        <li><strong>얼음</strong>을 <em>150ml</em>컵에 담는다.</li>
+        <li><b>샷</b>을 내린다.</li>
+        <li><em>물</em></li>
+        <li><b>물물물</b></li>
+        <li><i>에스프레소 샷</i>을 넣어주면</li>
+        <li><u>완성!</u> <del>디카페인도 가능합니다.</del></li>
+    </ol>
+
+    <hr>
+    <!-- 수평줄 태그 -->
+
+    <!-- 목록 태그의 중첩 사용 -->
+    <h3>음식</h3>
+    <ul>
+        <li>양식
+            <ul>
+                <li>spargetti</li>
+                <li>steak</li>
+            </ul>
+        </li>
+        <li>한식
+            <ul>
+                <li>kimchi</li>
+                <li> dd</li>
+            </ul>
+        </li>
+
+        <li>일식
+            <ul>
+                <li>초밥</li>
+            </ul>
+        </li>
+    </ul>
+
+
+
+    <h2>img 태그</h2>
+        <!-- 
+        상대경로 : 현재 위치를 기준으로 하는 상대적인 경로.
+            - 프로젝트의 위치가 바뀌어도 그대로 사용할 수 있다는 장점. 
+            - 목적 파일(불러올 사진)의 위치가 바뀐다면 상대경로를 수정해야하는 단점.
+            ex. ./src/img/img.png
+            
+            cui 환경 : 터미널에서 작업 / gui 환경 : 그래픽 불러오는?? 
+            -->
+        <img src="../24.11월초 이전 실습자료 /choco.png" width="100px" height="50px" alt="대체 글자입니다. ex. 초콜릿">
+        <!-- alt : 엑박뜰때 나올 글자 노출 -->
+        <!-- terminal 명령어 
+            - ls : 현재 있는 파일 
+            . (점 1개)): 현재 위치에서 현재 나올 파일 리스트 불러옴
+            .. (점 2개): 현재 위치의 폴더 
+            (상위폴더 : cd ..  / cd lecture ) 
+            
+            -->
+        <br>
+        <!-- 
+            절대경로 : root( 맨 처음, 최상단) 부터 해당 파일의 경로 
+                     로컬 환경에서는 어느 곳에서든 접근 가능하다는 것이 장점. 
+                     반면, 다른 로컬에서는 절대 경로가 실제로 동일해야만 접근이 가능하다는 것이 단점.
+                     ex. https://www.naver.com ,  C:/User/document...
+                     
+                * 로컬이란 : 로컬(지방)환경 = 내 피씨 상
+                
+                -->
+        <br>
+        <!-- 인터넷 이미지 주소를 가지고 이미지 추가하는 방법  : 인터넷상 이미지 우클릭 > 이미지주소복사 -->
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjBfMjUw%2FMDAxNzI5NDI2Mzk4ODkx.rnvttdtkZhZKxOQegmp8LhKci3HQ0eEfoisqzqW8L0Eg.MZVw9rmc8VdFckaV-Y0ObD3LEm80VJ_RpiHsj3vgxGog.PNG%2F005.png&type=a340" alt="인터넷에서 이미지주소복사한 사과">
+
+    <hr>
+    <!-- 
+        a tag target attribute : 링크가 열릴 위치 지정
+            - _self(default) : 현재 탭에서 열기
+            - _blank : 새 탭으로 열기 -->
+
+        <a href="https://www.naver.com">네이버 바로가기</a>
+        <!--target 안하면 현재 탭에서 페이지 이동을 바로함. -->
+        <a href="https://www.naver.com" target="_blank">네이버 바로가기</a>
+        <!-- target 은 어떤 탭에서 페이지 이동할지? 에 대한 설정값 -->
+        <a 
+        href="https://www.naver.com"
+        target="_blank"
+        title="마우스를 올리면 나타나는 제목">네이버 바로가기</a>
+        <!-- title 까지 쓰면 호버시 나오는 것.  -->
+
+
+
+
+
+        
+</body>
+</html>

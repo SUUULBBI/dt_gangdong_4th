@@ -1,0 +1,146 @@
+<!DOCTYPE html html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> hello world</title>
+        <link rel="stylesheet" href="./folder1/1115test.css">
+        
+        <style>
+            a:hover{
+                color:red;
+                background-color: black;
+            }
+            li:hover{
+                color:darksalmon;
+            }
+            .lion:hover{
+                background-color: gray;
+            }
+            #btn:active{
+                color:aqua;
+            }
+            #radio.focus{
+                background-color: chartreuse;
+            }
+            h1:hover{
+                color:red;
+            }
+            a:active{
+                color:blue;
+            }
+            #text1:focus{
+                color:orange;
+            }
+
+            .fruits span:first-child{
+                color: purple;
+            }
+            .fruits div:first-child{
+                color: purple;
+            }
+            .fruits h3:last-child{
+                color:red;
+            }
+            .fruits *:nth-child(3s){
+            color:blue;
+            }
+            .fruits *:nth-child(2n+3){
+                color: indianred;
+            }
+            .fruits *:not(span){
+                color:green;
+            }
+            .box::before{
+                content:"앞!";
+            }
+            .box::after{
+                content:"뒤!";
+            }
+          
+
+
+            [disabled] {
+                color:red;
+                background-color: yellow;
+            }
+
+            [type="password"]{
+                background-color: blue;
+            }
+            [type="text"]{
+                background-color: gray;
+            }
+
+            [type="radio"]{
+                background-color: aqua;
+            }
+        </style>
+
+    </head>
+
+
+<body>
+        <h1>복합선택자 사용 연습</h1>
+        <p>동물원에 왔어요</p>
+        <div class="zoo">
+            <ul>
+                <span>여긴 사파리!</span>
+                <li>곰</li>
+                <li id="tiger">호랑이</li>
+                <li>팬더</li>
+                <span class="lion">사자1</span>
+                <li class="lion">사자2</li>
+                <li>사육사 sarah</li>
+                <li>사육사 세령</li>
+            </ul>
+            <span class="lion">사파리 밖의 사자</span>
+        </div>
+        <p class="lion">야생의 사자</p>
+
+        <a href="https://naver.com">네이버</a>
+        <input id="btn" type="button" value="테스트버튼1">
+        <input id="radio" type="radio" value="input">
+
+
+        <div>
+            <h1>h1</h1>
+            <a href="https://www.naver.com">a</a>
+            <input id="text1" type="text" value="text">
+        </div> 
+        
+        
+        <div class="fruits">
+            <span>딸기</span>
+            <span>수박</span>
+            <div>오렌지</div>
+            <p>망고</p>
+            <h3>사과</h3>
+            <span>딸기</span>
+            <span>수박</span>
+            <div>오렌지</div>
+            <p>망고</p>
+            <h3>사과</h3>
+            <span>딸기</span>
+            <span>수박</span>
+            <div>오렌지</div>
+            <p>망고</p>
+            <h3>사과</h3>
+        </div>
+    </body>
+
+    <body>
+        <div class="box">
+
+            안녕하세요!
+        </div>
+
+
+        <input type="text" value="HEROPY">
+        <input type="password" value="1234">
+        <input type="text" value="ABCD" disabled>
+        <input type="radio" value="radio" checked>
+        <label for="radio">라디오1</label>
+        <input type="button" name="btn" id="btn100">
+    </body>
+
+</html>
