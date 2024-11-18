@@ -1,11 +1,9 @@
-div > .check4 {
-    background-color: reds;
-    box-sizing: border-box;
-}    
 
 
 
-
-
-
-
+div > #checkbox2:active {
+    background-color: yellow;
+}
+#checkbox2 {
+    background-color: yellow;
+}
