@@ -1,0 +1,42 @@
+.d-inline1 {
+    display: inline;
+    background-color: lightblue;
+}
+
+.d-inline2 {
+    display: inline;
+    background-color: lightcoral;
+    /* width: 200px;
+    height: 200px; */
+}
+
+.d-block1 {
+    display: block;
+    background-color: lightblue;
+}
+
+.d-block2 {
+    display: block;
+    background-color: lightcoral;
+    width: 200px;
+    height: 200px;
+}
+
+.d-inline-block1 {
+    display: inline-block;
+    background-color: blue;
+}
+
+.d-inline-block2 {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    width: calc(300px - 100px);  /* =200px  */
+    height: 200px;
+    text-align: center;
+    line-height: 200px; 
+    /* height와 line-height 값이 동일해진다면 세로중앙 정렬 효과가 있음 */
+}
+
+
+

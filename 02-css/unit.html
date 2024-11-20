@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 단위</title>
+    <link rel="stylesheet" href="./unit.css">
+</head>
+<body>
+    <h1>px</h1>
+    <div class="box px"></div>
+
+    <h1>%</h1>
+    <div class="box pct-parent">
+        <div class="pct-child"></div>
+    </div>
+
+    <!-- em의 경우 중첩일 때 사용하지만, 잘 사용하지 않는다고 함. -->
+    <h1>em</h1>
+    <!-- 1em = 20px ( 왜냐하면 css 파일에서 html > font-size : 20px 로 지정했기 때문)-->
+    <div class="em">
+        가가
+        <!-- 2em = 2*20px = 40px -->
+        <span class="em">
+            나나
+            <!-- 2em = 2*40px = 80px -->
+            <span class="em">다다</span>
+        </span>
+    </div>
+
+    <hr>
+    <h2>em 주의사항</h2>
+    <div class="box">
+        <div class="case1">여기는 20px
+            <span class="em-3">여기는 3em 이므로</span>
+            <!-- em-3=3em / * 3em = 3*em = 3 * 20px = 60px  -->
+        </div>
+        <div class="case2">
+         여기는 10px
+            <span class="em-3">여기는 3em이므로</span>
+            <!-- 3em = 3 * 10px = 30px -->
+       </div>
+    </div>
+
+    <hr />
+    <h1>rem</h1>
+    <!-- 1rem = 20px -->
+    <div class="box">
+        가가
+        <!-- 2rem = 2 * 20px = 40px -->
+        <span class="rem">나나
+            <!-- 2rem = 2 * 20px = 40px -->
+            <span class="rem">다다</span>
+        </span>
+    </div>
+
+    <hr>
+    <button class="btn success">Success</button>
+    <button class="btn error">Error</button>
+
+
+
+
+
+
+
+
+</body>
+</html>

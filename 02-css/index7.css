@@ -1,0 +1,81 @@
+/* 웹 폰트(web font) 관련  */
+/* 
+    - 구글 웹 폰트, 눈누 웹 폰트 (대중적임)
+    - 모든 브라우저에서 보는 폰트를 통일시킴.
+    - 폰트를 다운로드 하는 것이 아니라 link 태그에 걸려있는 주소에서 폰트를 가져오는 방식
+    - 보통 기본 폰트는 body, *, rot, html 등등 태그에 작성함.
+
+*/
+
+
+/* #2. 눈누 폰트 적용 방법 : 사이트내 원하는 폰트를 눌러서 '웹폰트로사용'의 모든 코드 소스를 복사해서 붙여넣기함.  */
+/* 라이선스 사용 범위 꼭 보고 사용하기. */
+@font-face {
+    font-family: 'establishRetrosansOTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRetrosansOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 
+    @font-face
+    - CSS에서 웹폰트를 정의하기 위해 사용되는 규칙.
+    - 이를 통해 웹사이트에 사용자 정의 폰트를 추가하고
+        사용자가 기기에 폰트가 설치되어 있지 않아도 사용할 수 있도록 폰트를 가져올 수 있음.
+*/
+
+
+/* ------------------------------------------------------------------------- */
+
+/* - 구글 웹폰트 사용 코드 복사붙여넣기 - html 및 css 에 사용되는 코드를 각각 잘 넣어주어야함.  */
+body {
+    /* font-family: "Doto", sans-serif; */
+    /* 
+        font-family: "Doto", sans-serif;
+        ㄴ  의미 : 나는 Doto 글꼴을 사용할건데, 만약 그게 적용 불가할 때는 snas-serif로 사용해줘    */
+    font-optical-sizing: auto;
+    /* 텍트스의 크기에 따라 글꼴 디자이너가 의도한 세부적인 모양으로 자동조정 되도록 해줘. */
+
+    font-weight: 800;
+    /* font 굵기 : 100단위, 100~900까지 가능하며, 이것만 직접 적어주었음. */
+}
+
+body {
+    font-family: "establishRetrosansOTF";
+}
+
+div {
+    /* 색상, 글자색 */
+    color: red;
+
+    /* 글자 크기 */
+    font-size: 30px;
+
+    /* 폰트 굵기 
+        - lighter, normal, bold, bolder
+        - 100 ~900 (100단위 사용가능)*/
+
+        font-weight: 900;
+
+        /* 
+        폰트 모양
+        - normal, italic, oblique (italic과 유사한 기울기며, 40deg; 와같이 기울기 조정을 더 섬세하게 할 수 있는 것이 차이점. */
+    font-style: oblique 45deg;
+
+
+    /* 정렬
+        -center, left, right, justify( 양쪽정렬, 기본값임) */
+    text-align: center;
+
+    /* 글자선
+        - underline, line-through, overline, none
+     */
+
+    text-decoration: underline;
+    /* text-decoration: line-through; 취소선. */
+
+    /* 줄높이 = default : 1.2 
+        px값임 */
+    line-height: 4;
+}
+

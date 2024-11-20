@@ -1,0 +1,28 @@
+.english1 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+}
+
+
+@font-face {
+        font-family: 'ClimateCrisisKR-1979';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/ClimateCrisisKR-1979.woff2') format('woff2');
+        font-weight: 900;
+        font-style: normal;
+    }
+
+body {
+    font-family: "ClimateCrisisKR-1979";
+}
+
+
+.blue1 {
+    width : 200px;
+    height: 200px;
+    background-color: blue;
+    display: inline-block;
+}
+
+.blue1:hover {
+   opacity: 0;
+}
