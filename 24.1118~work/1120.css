@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'ClimateCrisisKR-1979';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/ClimateCrisisKR-1979.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+/* font-weight : normal , light, bold, 900 */
+/* font-varient : normal, small-caps
+    ㄴ small caps : 모든 영문은 대문자로 변환되고 원래 대문자 크기보다 작게 출력됨  */
+
+body {
+    font-family: "ClimateCrisisKR-1979";
+    font-size: 8px;
+}
 .viewport1 {
     background-color: orange;
 
