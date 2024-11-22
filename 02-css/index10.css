@@ -1,0 +1,145 @@
+.background {
+    width: 500px;
+    height: 300px;
+    color: white;
+    /* 배경색 : 투명함 default = background-color: transparent; */
+    background-color: transparent;
+    /* 배경 그라데이션 Background gradient */
+    /* 기본default 방향 : 위 -> 아래 */
+    background: linear-gradient(blue, pink);
+    background: linear-gradient(to right, blue, pink);
+    background: linear-gradient(75deg, royalblue, pink);
+    background: linear-gradient(0.8turn, blue, pink); 
+        /* 0.8turn : 시계방향으로 0.8돌리기 / 1하면 원래 위치로 바뀜  */
+    background: linear-gradient(blue, 90%, pink);
+    /* % 넣으면 앞의 컬러가 전체 중 몇프로 차지할지 정해줌. */
+    
+    background: linear-gradient(blue, 20%, pink, 30%, green);
+    /* 전체중 첫번째 컬러가 20% , 나머지 80% 남은 것에서 추가 색상은 100%로 간주하고 거기서 나눠 가짐. */
+
+
+
+
+}
+    /* --------------------------------------------- */
+
+/* 배경 이미지 속성 */
+.backgroundImage {
+    width: 700px;
+    height: 400px;
+    background-color: lightcoral;
+
+    /* 이미지없음 */
+    background-image: none;
+
+    /* 이미지 경로 */
+    background-image: url(./Owl_image.png);
+
+    /* 이미지 반복 = default 값임, 우리가 설정해주지 않더라도 자동으로 반복됨. */
+    background-repeat: repeat; 
+
+    /* repeat-x : 수평으로 x축으로만 반복됨, 따라서 아래쪽은 걍 비어보이게 됨. */
+    background-repeat: repeat-x;
+    
+    /* repeat-y : 수직으로 y축으로만 반복됨, 따라서 우측은 비어보이게 됨. */
+    background-repeat: repeat-y;
+
+    /* 반복 없애기 */
+    /* background-repeat: no-repeat; */
+
+
+        /* --------------------------------------------- */
+    /* 배경 이미지 위치  */
+    /* 수평 ; left center right */
+    /* 수직 : top, center, bottom */
+
+    /* background-position: center; */
+    /* background-position: left top; 왼쪽위로 정렬  */
+    /* background-position: right  bottom;  오른쪽 아래로 정렬 */
+    
+    /* 왼쪽(기본)에서 30px, 위에서 100px 만큼의 위치에 둬. */
+    /* background-position: 30px 100px; */
+
+    /* 값이 하나만 있을 때는 수평 위치만 적용됨. 따라서 왼쪽 위치에서 50px만큼 떨어지고, 세로중앙정렬됨 */
+    /* background-position: 50px; */
+
+
+
+        /* --------------------------------------------- */
+    /* 배경 이미지 크기 */
+    /* 첫 번째는 너비 width, 두번째는 높이 height  */
+    /* background-size: 50px; */
+    
+    /* auto : 원래 이미지 크기로 나옴 */
+    /* background-size: auto; */
+
+
+    /* 비율유지 : cover , contain
+        - cover : 요소의 더 넓은 너비에 맞춰서 커지는데, 가로세로 비율은 고정. / (따라서 좀더 짧은 쪽의 길이에는 그림이 짤릴수있음)
+        -contain : 요소의 더 짧은 너비에 맞춰서 커지거나 작아지는데 가로세율 비율은 고정. (따라서 )
+    */
+    /* background-size: cover ; */
+    /*  background-size: 100% auto; 
+    -> 첫번째 너비width 를 100%로 꽉채워라, 높이height는 auto 자동.
+    -> width 가 더 넓을 때는 cover 랑 똑같이 동작되는 것처럼 보임. 
+    */
+    /* background-size: 100% auto; */
+
+
+
+
+    /* 이미지 다 보이게 하고 싶을때는 보통 contain 씀.
+        때에 따라서 다르지만 세로가 더 클때는 세로를 100% 넣고 가로는 auto 하면 contain과 동일하게 보임. */
+    /* background-size: contain; */
+    /* background-size: auto 100%; */
+
+
+    /* --------------------------------------------- */
+
+    /* 배경 이미지 스크롤 특성(default=scroll) */
+    /* scroll배경이 요소 자체를 기준으로 고정되고 콘텐츠와 함께 스크롤 되지 않음. */
+    overflow: scroll;
+    background-attachment: scroll;
+
+    /* 배경이 뷰포트를 기준으로 고정되어 화면ㅇ르 스크롤해도 움직이지 않고 콘텐츠만 스크롤됨. */
+    /* background-attachment: fixed; */
+
+    /* 배경이 요소의 내용에 대해 고정되며 컨테이너의 스크롤에 맞춰 움직임.*/
+    /* background-attachment: local; */
+
+
+}
+
+
+
+.div1 {
+    width: 800px;
+    height: 500px;
+    background-color: skyblue;
+    background-image: url(./Owl_image.png);
+    background-repeat: repeat-x;
+    background-position: 50%;
+}
+
+.div2 {
+    width: 800px;
+    height: 500px;
+    background-color: skyblue;
+    background-image: url(./Owl_image.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100px 30px;
+
+}
+
+.div3 {
+    width: 800px;
+    height: 500px;
+    background-color: skyblue;
+    background-image: url(./Owl_image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 50px;
+    /* background-position: center; */
+
+}

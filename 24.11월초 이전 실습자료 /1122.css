@@ -1,0 +1,62 @@
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: beige;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 100px;
+}
+
+.container2 {
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.item22 {
+    width: 100px;
+    height: 100px;
+    background-color: burlywood;
+    border: 1px solid;
+    line-height: 100px;
+    text-align: center;
+}
+
+
+.container3 {
+    width: 500px;
+    height: 500px;
+    background-color: beige;
+    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-content:flex-start; */
+    align-items: center;
+    /* align-content: center; */
+    /* align-content: end; */
+    align-items: flex-start;
+
+    /* align-content 가 align-items 보다 우선적으로 적용됨. 따라서 뒤에 align-items 를 넣더라도 적용되지 않음.. 주의... */
+}
+.item33 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+
+
+}
+
+

@@ -1,0 +1,86 @@
+.container {
+    background-color: seashell;
+    width: 1000px;
+    height: 400px;
+
+}
+.item  {
+    width: 80px;
+    height: 80px;
+    background-color: skyblue;
+    margin: 8px;
+    text-align: center;
+    line-height: 80px;
+}
+.flex1 {
+    width: 1000px;
+    height: 100px;
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.flex2 {
+    background-color: yellow;
+    width: 1000px;
+    height: 270px;
+    padding: 1px;
+    position: relative;
+    display: flex;
+  justify-content: space-evenly;
+}
+
+.fl2-1 {
+    width: 100px;
+    height: 260px;
+    line-height: 260px;
+    text-align: center;
+   }
+
+   .flex2 {
+    position: relative;
+   }
+
+.fl2-2 {
+    position: absolute;
+    top: 100px;
+    left: 350px;
+}
+
+/* .fl2-3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+} */
+
+.flex2-4 {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.flex3 {
+    width: 1000px;
+    height: 100px;
+    background-color: greenyellow;
+    padding: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.fl3-1 {
+    flex-grow: 1;
+    background-color: blue;   
+}
+.fl3-2 {
+    flex-grow: 2;
+    background-color:darkslateblue;
+}
+.fl3-3 {
+    flex-grow: 3;
+    background-color: purple;
+}
+
+
