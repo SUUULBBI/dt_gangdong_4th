@@ -1,0 +1,26 @@
+.no-1 {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    width: 500px;
+    height: 20px;
+    text-align: center;
+
+}
+
+.no-2 {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    background-color: blue;
+}
+
+.no-2:active {
+    background-color: red;
+}
+
+
+#text:focus {
+    background-color: aqua;
+}
