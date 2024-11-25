@@ -1,0 +1,230 @@
+.choco {
+    /* background-color: lightskyblue;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 100px;
+}
+
+img {
+    width: 100%;
+    height: 100%; */
+}
+
+img:hover {
+
+    /* 
+        transform 속성
+        - 요소의 모양, 크기, 위치 등을 변경하는데 사용함.
+    */
+    /* 
+        #1. skew ()
+        - 원하는 각도만큼 객체를 기울여주는 속성.
+        - x, y축 나누어 속성 부여가 가능함. (단, 대문자로 쓰기)
+            -skewX(x-deg)
+            -skewY(y-deg)
+        - x, y 동시 사용 원하는 경우
+            -skew(x-deg, ydeg)
+    */
+
+    /* transform: skewX(50deg);
+    transform: skewY(30deg);
+    transform: skew(-30deg, -30deg); */
+
+
+        /* 
+            #2.scale()
+            -크기 조절 (확대, 축소)
+            - 1보다 큼 : 확대
+            - 0~1 사이 : 축소 = 0.n만큼 확대 
+
+        */
+
+    /* transform: scaleX(2);
+    transform: scaleY(2);
+    transform: scale(0.5);
+    transform: scale(2, 0.5);    */
+
+
+
+    /* 
+        #3, rotate()
+        -회전
+        -주어진 각도만큼 회전함
+        -rotateX() : x축을 기준으로 회전
+        -rotateY() : y축을 기준으로 회전  
+        -rotate() : 시계방향으로 회전
+
+        -뒷면 안보이게
+        -backface-visibility : hidden;
+
+    */
+    /* transform: rotateX(80deg);
+    transform: rotateY(60deg);
+    transform: rotate(55deg);
+    transform: rotateY(180deg); */
+    /* backface-visibility: hidden; */
+
+
+
+
+    /* 
+        #4. translate()
+            - 이동시킴
+            -translateX() : x 축을 기준으로 이동.
+            -translateY() : y 축을 기준으로 이동.
+            -translate() : x , y축을 기준으로 이동.
+            단, y축값이 양수값이면 아래로, 음수값이면 위로 감. (반대임)
+    */
+    /* transform: translateX(-30px);
+    transform: translateY(-70px);
+    transform: translate(50px,50px);
+    transform: translate(-50px,-50px);
+
+
+
+    /* 
+    transition 속성
+    - css요소의 속성값이 변화할 때 일정 시간동안 부드럽게 변화가 일어나도록 설정해줌.
+    - 따라서 transform 속성과 함께 자주 쓰임. ex. transition: transform 1s;
+    - transition 단일로도 사용 가능함. ex. transition : 1s;
+    */
+    /* transform: scale(1.2);
+    transition: transform 1s; */
+    /* 이미지가 변환 할 때 1초동안 부드럽게 변환됨. */ 
+}
+
+/* 원근법 : perspective(200px) 
+  * 효과 여러개 사용방법 : 이어서 쓰기
+        ex ) transform: scale(1.2) perspective(200px) translate(150px, 130px) rotate(20deg, 30deg) */
+
+
+
+
+
+
+/* 간단실습 해답,,  */
+
+
+.outer {
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+}
+
+.inner {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+
+.outer1 {
+    position: relative;
+}
+.inner1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* x -50% : 본인 요소 가로 길이의 50%만큼 x축의 왼쪽으로 이동해라. 
+       y - 50% : 본인 요소 가로 길이의 50%만큼 y축의 위쪽으로 이동해라.  
+       >> 실무에서 이런식으로 중앙 배치를 많이 씀..  
+       */
+}
+
+.outer2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* 코딩온  -  실습1번 */
+
+.box {
+    height: 130px;
+    width: 200px;
+    display: flex;
+  }
+
+.item {
+    height: 100px;
+    width: 150px;
+    transform: skew(0deg, 30deg);
+    margin: -20px;
+ }
+
+.img1 {
+    z-index: 3;
+}
+.img2 {
+    z-index: 2;
+
+}
+.img3 {
+    z-index: 1;
+
+}
+
+.img1:hover {
+    transform: rotateY(0deg);
+    transition: transform 2s;
+    z-index: 5;
+}
+.img2:hover {
+    transform: rotateY(0deg);
+    transition: transform 0.5s;
+    z-index: 5;
+}
+
+.img3:hover {
+    transform: rotateY(0deg);
+    transition: transform 2s;
+    z-index: 5;
+}
+
+
+/* 코딩온  -- 실습2번 */
+.container {
+    width: 300px;
+    height: 300px;
+    background-color: bisque;
+}
+.items {
+    width: 50px;
+    height: 50px;
+    border: 1px solid ;
+    background-color: skyblue;
+}
+
+/* 
+    transition 보충 설명
+    -transition : 1s;  
+        => 간단히 모든 속성에 트랜지션을 적용하고 싶을 때 사용.
+        => 변경 대상 속성이 많거나, 다양할 경우 적합함.
+    -trnasition: transform 1s;
+        => 성능 최적화를 위해 특정 속성에만 트랜지션을 적용하고 싶을 때 사용함.
+        => 필요없는 속성에는 트랜지션 효과가 적용되지 않도록 세밀하게 조정해줌. 
+
+    # transition 여러 속성 한번에 쓰는 방법. (변경대상, 진행속도, 속도효과(선택사항))
+     - transition: width 2s ease, background-color 4s linear;
+*/
+.boxes1 {
+    transition: 2s;
+}
+.boxes1:hover {
+   /* transform: scaleX(2);
+   transform-origin: left;
+   transition: transform 1s; */
+   width: 200px;
+   /* transition-duration: 2s; */
+    
+}
+
+.boxes2 {
+    transition: 2s;
+}
+.boxes2:hover {
+    transform: rotate(45deg);
+}

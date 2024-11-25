@@ -1,0 +1,25 @@
+
+
+@media screen and (min-height:500px) {
+    body {
+        background-color: skyblue;
+    }
+    p {
+        background-color: green;
+    }
+}
+@media screen and (max-height:300px) {
+    p {
+        font-weight: bold;
+        font-style: italic;
+    }
+    body {
+        background-color: orange;
+    }
+
+}
+
+
+
+
+

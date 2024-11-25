@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+}
+
+.ball {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(0.1turn, rgba(254, 245, 79, 0.702) 5%, rgb(255, 172, 19) 100% );
+    border-radius: 50%;
+    position: relative;
+    top:0px;
+    left: 0px;
+    animation: aniScroll 5s infinite linear;
+
+ }
+
+@keyframes aniScroll {
+   0% {
+    left: 0;
+    top:0;
+    /* 0,0에 위치한 상태를 나타냄 */
+   }
+
+   25% {
+    left: calc(100vw - 80px);
+    top: 0;
+    /* 왼쪽에서 밀어서 오른쪽으로 보내기 >> 뷰포인트기준 공의 가로길이만큼 빼서 뷰포인트 안에 보여주기. */
+   }
+
+   50% {
+    left: calc(100vw - 80px);
+    top: calc(100vh - 80px);
+    /* 왼쪽에서 밀고 위에서 밀어서 오른쪽 위쪽끝으로 보내기  */
+   }
+   75% {
+    left: 0;
+    top: calc(100vh - 80px);
+    /* 왼쪽기준0 , 위에서 아래로 밀어서서 좌측아래로 보내기 */
+   }
+    100% {
+        left: 0;
+        top: 0;
+        
+    }
+}
+/* 
+.ball {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(blue, red);
+    border-radius: 50%;
+    animation: ball 10s 2s  infinite normal ;
+}
+@keyframes ball {
+    0% {
+        left: 0vw;
+        bottom: 0vw;
+    }
+    25% {
+        left: 93vw;
+        bottom: 0vw;
+    }
+    50% {
+        left: 93vw;
+        bottom: -46vw;
+    }
+    75% {
+        left: 0vw;
+        bottom: -46vw;
+    }
+    100% {
+        left: 0vw;
+        bottom: 0vw;
+    }
+} */
