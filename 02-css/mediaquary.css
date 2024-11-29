@@ -11,13 +11,11 @@
 */
 .header {
     background-color: beige;
-
 }
 
 .main {
     background-color: blue;
     display: flex;
-
 }
 .section {
     background-color: burlywood;
@@ -32,7 +30,7 @@
     background-color: darkcyan;
 }
 
-@media (max-width:480px) {
+@media (max-width: 480px) {
     /* max-width: xpx => 뷰포트 width가 x 이하일때만 작성된다는 의미.  */
     .header {
         height: 50px;
@@ -51,13 +49,12 @@
     .footer {
         height: 50px;
     }
-
 }
 
 /* break point : 480 */
 /* screen 있으면 and 하고 사이즈 정의 해주어야 함. 
     screen 없이 할때는 and 없이 하나의 사이즈만 말해줘도 됨. */
-@media screen and (min-width:481px) and (max-width:768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
     /* @media ~ : 규격틀 정하기임. 이 규격틀의 a부터 b까지 사이일 때 안의 태그들을 적용해라.
               ex. 화면너비가 481px이상~ 768px 이하일때 적용해라.  */
     .header {
@@ -69,20 +66,18 @@
     .aside {
         display: none;
     }
-
 }
-
 
 /* 세로모드 vs 가로모드 : 구분 방식은 길이가 더 긴쪽이 해당 모드임. */
 /* 가로모드 해보기 */
 @media screen and (orientation: landscape) {
-     body {
+    body {
         background-color: lightgreen;
-     }
+    }
 }
 
 /* 세로모드 해보기 */
-@media screen and (orientation:portrait) {
+@media screen and (orientation: portrait) {
     body {
         background-color: pink;
     }

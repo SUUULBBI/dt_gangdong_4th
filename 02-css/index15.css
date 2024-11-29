@@ -14,7 +14,7 @@
         -default : normal / reverse(반대 방향) / alternate (반복될때마다 방향ㅇ르 바꿔줌)/ alternate-reverse
         - alternate : from -> to 방향으로 애니메이션 처음 진행했을 때 , 다음 회차에서는 to-> from 방향으로 바뀌면서 반복됨. 
 
-*/  
+*/
 
 .box {
     width: 100px;
@@ -27,7 +27,6 @@
     animation-delay: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-
 }
 /* animation-name의 경우 애니메이션 이름을 개발자 마음대로 지을 수 있는데, 
 해당 명명은 관련된 내용으로 이름지어야 추후 유지보수가 가능함.
@@ -49,9 +48,7 @@ seulbi : 애니메이션 이름임.  */
     100% {
         left: 0px;
     }
-
 }
-
 
 .ball {
     width: 100px;
@@ -91,22 +88,23 @@ seulbi : 애니메이션 이름임.  */
     animation: bounce2 2s infinite;
 }
 @keyframes bounce2 {
-    from, to {
+    from,
+    to {
         bottom: 0px;
         animation-timing-function: ease-out;
         /* 0px에서 정상속도로 시작해서 속도를 줄이면서 이제 다음 것 적용함.
         (다음 50%로 넣은 300px 도달했다가 다시 내려가면서 정상속도로 0px위치로 이동함.  -> */
     }
     50% {
-        bottom : 300px;
+        bottom: 300px;
         animation-timing-function: ease-in;
-    
-    /* }to {
+
+        /* }to {
         bottom: 0;
         animation-timing-function: ease-out; */
     }
 
-/* 
+    /* 
 
     tip)
     from 에서 to로의 애니메이션 (정방향 애니메이션) [from ~to]
@@ -120,8 +118,4 @@ seulbi : 애니메이션 이름임.  */
     이러한 경우 애니메이션은 to 상태에서 시작해서 from 상태로 종료함.
 
 */
-
 }
-
-
-

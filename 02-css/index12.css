@@ -15,7 +15,7 @@
 
 .div1 {
     top: 100px;
-    left:100px;
+    left: 100px;
     background-color: red;
     z-index: 6;
 }
@@ -27,7 +27,7 @@
 }
 
 .div3 {
-    top:180px;
+    top: 180px;
     left: 180px;
     background-color: yellow;
     z-index: 8;
@@ -38,16 +38,15 @@
     left: 220px;
     background-color: green;
 }
-.div5 { 
+.div5 {
     top: 260px;
     left: 260px;
     background-color: blue;
     z-index: 10;
 }
 
-
 /* -------------실습1------------ */
- 
+
 .position-container1 {
     width: 400px;
     height: 400px;
@@ -66,7 +65,6 @@
 .position-item1 {
     background-color: blue;
     z-index: 11;
-
 }
 
 .position-item2 {
@@ -80,7 +78,6 @@
     left: 60px;
     z-index: 10;
 }
-
 
 .bg-orange {
     width: 1000px;
@@ -106,7 +103,7 @@
     width: 500px;
     height: 500px;
     border: 0 solid;
-    border-radius: 17% 0 0 0 ;
+    border-radius: 17% 0 0 0;
     position: relative;
 }
 
@@ -129,8 +126,8 @@
     z-index: 2;
 }
 
-.ab-4 { 
-    background-color:chartreuse ;
+.ab-4 {
+    background-color: chartreuse;
     width: 500px;
     height: 500px;
     position: absolute;
@@ -150,12 +147,10 @@
     z-index: 3;
 }
 
-
-
 .bg-1 {
     width: 500px;
     height: 500px;
-   border-radius: 50%;
+    border-radius: 50%;
     background: linear-gradient(30deg, yellow 3%, #fb23a8 100%);
     position: relative;
 }

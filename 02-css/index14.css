@@ -12,7 +12,6 @@ img {
 }
 
 img:hover {
-
     /* 
         transform 속성
         - 요소의 모양, 크기, 위치 등을 변경하는데 사용함.
@@ -31,8 +30,7 @@ img:hover {
     transform: skewY(30deg);
     transform: skew(-30deg, -30deg); */
 
-
-        /* 
+    /* 
             #2.scale()
             -크기 조절 (확대, 축소)
             - 1보다 큼 : 확대
@@ -44,8 +42,6 @@ img:hover {
     transform: scaleY(2);
     transform: scale(0.5);
     transform: scale(2, 0.5);    */
-
-
 
     /* 
         #3, rotate()
@@ -64,9 +60,6 @@ img:hover {
     transform: rotate(55deg);
     transform: rotateY(180deg); */
     /* backface-visibility: hidden; */
-
-
-
 
     /* 
         #4. translate()
@@ -91,20 +84,14 @@ img:hover {
     */
     /* transform: scale(1.2);
     transition: transform 1s; */
-    /* 이미지가 변환 할 때 1초동안 부드럽게 변환됨. */ 
+    /* 이미지가 변환 할 때 1초동안 부드럽게 변환됨. */
 }
 
 /* 원근법 : perspective(200px) 
   * 효과 여러개 사용방법 : 이어서 쓰기
         ex ) transform: scale(1.2) perspective(200px) translate(150px, 130px) rotate(20deg, 30deg) */
 
-
-
-
-
-
 /* 간단실습 해답,,  */
-
 
 .outer {
     width: 200px;
@@ -138,33 +125,29 @@ img:hover {
     align-items: center;
 }
 
-
-
 /* 코딩온  -  실습1번 */
 
 .box {
     height: 130px;
     width: 200px;
     display: flex;
-  }
+}
 
 .item {
     height: 100px;
     width: 150px;
     transform: skew(0deg, 30deg);
     margin: -20px;
- }
+}
 
 .img1 {
     z-index: 3;
 }
 .img2 {
     z-index: 2;
-
 }
 .img3 {
     z-index: 1;
-
 }
 
 .img1:hover {
@@ -184,7 +167,6 @@ img:hover {
     z-index: 5;
 }
 
-
 /* 코딩온  -- 실습2번 */
 .container {
     width: 300px;
@@ -194,7 +176,7 @@ img:hover {
 .items {
     width: 50px;
     height: 50px;
-    border: 1px solid ;
+    border: 1px solid;
     background-color: skyblue;
 }
 
@@ -214,12 +196,11 @@ img:hover {
     transition: 2s;
 }
 .boxes1:hover {
-   /* transform: scaleX(2);
+    /* transform: scaleX(2);
    transform-origin: left;
    transition: transform 1s; */
-   width: 200px;
-   /* transition-duration: 2s; */
-    
+    width: 200px;
+    /* transition-duration: 2s; */
 }
 
 .boxes2 {

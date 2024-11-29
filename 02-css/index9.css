@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-    /* 브라우저 초기화 하는 이유 ? 
+/* 브라우저 초기화 하는 이유 ? 
         - 보다 일관된 디자인을 구현하기 위해 설정함.
         - 브라우저마다 기본으로 제공하는 여백 스타일이 다를 수 있음으로 이를 초기화해서 동일한 스타일링 환경을 만듬. 
         **따라서 필요에 따라서 개발 최초단계에 세팅해두고 사용하면 좋음. 
@@ -23,21 +23,18 @@
 /* overflow-x : 수평 방향으로 넘칠때 사용하여 스크롤 나오게 처리 
     overflow-y : 수직 방향으로 넘칠때 사용하여 스크롤 나오게 처리 */
 
+.box {
+    width: 500px;
+    height: 200px;
+    background-color: skyblue;
+    /* overflow: hidden; */
+    overflow-x: scroll;
+}
 
-    .box {
-        width: 500px;
-        height: 200px;
-        background-color: skyblue;
-        /* overflow: hidden; */
-        overflow-x: scroll;
-    }
-
-
-    /* 
+/* 
     브라우저가 행바꿈을 자동으로 넘겨주는데, 자동줄바꿈 해제하는 css 코드
     .no-wrap {
         white-space: nowrap;
     } */
-    /* 텍스트의 공백과 줄바꿈(개행)을 처리하는 방식 제어하는 css 속성이며,
+/* 텍스트의 공백과 줄바꿈(개행)을 처리하는 방식 제어하는 css 속성이며,
         평상시된 것 : white-space: normal(default임) */
-

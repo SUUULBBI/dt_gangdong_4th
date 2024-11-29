@@ -2,7 +2,6 @@ html {
     font-size: 20px;
 }
 
-
 .box {
     margin-botton: 100px;
 }
@@ -16,10 +15,8 @@ html {
         ex. 픽셀(px) / 포인트(pt) / 인치(inch) / 센티미터(cm) 등등..
 */
 
-
 /* px 단위 */
 /* - 한 화면의 픽셀 하나에 해당 */
-
 
 .px {
     width: 100px;
@@ -34,7 +31,6 @@ html {
     ex. 백분율(%)/ em / rem / 뷰포트 너비 ( vx) / 뷰포트 높이 (vh) 등등..
 */
 
-
 /* 
     %단위
     - 상위 요소의 상대적인 크기. (부모 요소 영향받음.)
@@ -48,11 +44,10 @@ html {
 }
 
 .pct-child {
-    width:60%;
+    width: 60%;
     height: 60%;
     background-color: palegreen;
 }
-
 
 /* 
     em
@@ -66,7 +61,6 @@ html {
 
 .case1 {
     font-size: 20px;
-
 }
 
 .case2 {
@@ -98,10 +92,9 @@ html {
 
 */
 
-
 /* 전역변수 - root / html / * / root  */
 :root {
-    /* :body {} */    /* :html {} */    /* :* {} */
+    /* :body {} */ /* :html {} */ /* :* {} */
     /* root or * or body = (전체영역, 전영역) 전역 변수 / 전영역에 변수가 적용됨. */
     --color-success: green;
     --color-error: red;
