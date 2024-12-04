@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="./03_document.js" defer></script>
+        <!-- defer : JS파일이 페이지 로딩과 동시에 '비동기적으로' 실행되도록 지시하는 역할임. 
+                따라서 defer 속성을 사용하면 스크립트가 페이지의 **html 파싱이 끝날때까지 실행되지 않음. 
+                즉, 파싱이 끝난 후, 비로소 js가 실행된다는 말임. 
+        -->
+        <!-- 
+                **비동기적 의미 : 스크립트가 로드되는 동안 다른 작업들이 동시에 진행될 수 있다는 의미임. 
+                따라서 js의 연결한 script코드를 아래쪽으로 위치하지 않더라도 다른 것을 동시에 읽어서 불러오도록 지시해주는 역할임. 
+        -->
+        <!-- HTML 파싱parsing 이란?  : 웹 브라우저가 html문서를 읽고 이를 DOM 트리로 변환하는 과정임.-->
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                border-radius: 10px;
+                border: 1px solid black;
+                margin: 10px;
+                text-align: center;
+                line-height: 100px;
+            }
+            .pink {
+                background-color: pink;
+            }
+            #green {
+                background-color: green;
+            }
+            #red {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>DOM 연습</h1>
+        <div class="pink">1</div>
+        <div class="pink">2</div>
+        <div class="pink">3</div>
+        <div class="pink">4</div>
+        <div class="others" id="green"></div>
+        <div class="others" id="red"></div>
+        <input type="text" name="id" />
+        <input type="button" name="id" value="click" />
+    </body>
+</html>
