@@ -148,3 +148,24 @@ friends.prepend(li0);
 
 hoon.before(li1); // 이렇게 하니깐 흰둥이 위치가 훈이 위로 변경됨
 hoon.after(li1); // 흰둥이 위치가 다시 훈이 아래로 변경됨. ** 마지막 것만 적용됨.
+
+///////////////////////////////////////////
+// #7. 요소 삭제
+// x.remove() :  x 요소 자체를 삭제
+// x.removeChil(y) : x의 자식요소인 y가 삭제
+// JS는 느슨한 언어여서 메모리에서 즉시 삭제되지 않고 참조를 유지하면 재활용이 가능함. (ex. 아래와 같이 firstLi 선언 후 삭제)
+
+const firstLi = document.querySelector('li');
+console.log(firstLi);
+
+const ul = firstLi.parentNode;
+console.log('ul>>>', ul);
+
+// ul.remove(); //ul태그 자체가 삭제됨
+
+// 참조를 유지하면서 재활용한 방법 👇🏻
+firstLi.remove(); // firstLi에 해당되는 것만 삭제됨. (메모리까지 삭제임.)
+div1.appendChild(firstLi); // but, JS특성상 메모리를 바로 삭제하지는 않는다고 함. (느슨한 언어여서)
+
+//ul.removeChild(firstLi); // ul내 ㅣi 중 firstLi에 해당되는 것만 삭제됨.
+//div1.appendChild(firstLi); //방금전 잘라낸 것을 다시 div1에 붙혔음.
