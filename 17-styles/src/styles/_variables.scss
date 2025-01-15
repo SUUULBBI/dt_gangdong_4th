@@ -1,0 +1,14 @@
+//  scss 파일명 앞에 _언더바 붙이는 이유(의미) (ex. _variables.scss)
+//  : 이 파일은 css 파일로 변환될 필요가 없음을 알리는 것. 어딘가 가져와서 import 해서 사용할 파일이라는 눈으로 보기위한 표기임
+
+// SaccComponent.scss 파일 안의 변수만 모아둔 파일
+//
+//  #1. $변수만들기
+//         ㄴ 아래 color~ 컬러명을 변수에 담았음
+$color-first: red;
+$color-second: orange;
+$color-third: yellow;
+
+$animation-duration: 0.4s;
+// 맨 아래쪽 #6번 선언
+$breakpoint-sm: 360px;

@@ -1,0 +1,8 @@
+//  scss 파일명 앞에 _언더바 붙이는 이유(의미) (ex. _variables.scss)
+//  : 이 파일은 css 파일로 변환될 필요가 없음을 알리는 것. 어딘가 가져와서 import 해서 사용할 파일이라는 눈으로 보기위한 표기임
+
+//// SaccComponent.scss 파일 안의  @mixin 로된 것 모두 모아둠
+@mixin box($size) {
+    width: $size;
+    height: $size;
+}

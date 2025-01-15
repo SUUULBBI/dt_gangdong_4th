@@ -1,0 +1,29 @@
+.basicButton {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.BasicCss-btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* 해결방안 2번 - BEM 규칙으로 이름 정하기 */
+.BasicCss__title--red {
+    color: red;
+}
+
+/* 해결방안 3번 - CSS selector */
+.BasicCss header {
+    background-color: lightseagreen;
+}
+
+.BasicCss h1 {
+    color: wheat;
+}

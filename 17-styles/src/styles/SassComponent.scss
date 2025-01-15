@@ -1,0 +1,95 @@
+// Sass /Scss >>> 파일명 대문자로
+//   ㄴ 이것은 해당 파일이 특정 react 컴포넌트와 밀접하게 연관된다는 것을 나타냄
+
+// Sass styling
+// *CSS 전처리기 주요 기능
+// 따로 나눠놓은 파일 가져오기 >>
+@import './variables';
+@import './utils';
+
+// * CSS 전처리기 주요 기능
+// //  #1. $변수만들기  (===> scss 파일로 옮겼음)
+// //         ㄴ 아래 color~ 컬러명을 변수에 담았음
+// $color-first: red;
+// $color-second: orange;
+// $color-third: yellow;
+
+// $animation-duration: 0.4s;
+// // 맨 아래쪽 #6번 선언
+// $breakpoint-sm: 360px;
+
+// #4-1. 믹스인 함수 선언(정의), 인자의 경우 필수값 아님.
+//아래 @mixin box 의 경우 _utils.scss에 들어가 있음
+// @mixin box($size) {
+//     width: $size;
+//     height: $size;
+// }
+
+// #4-3. 믹스인 - 여러개 인자일 때
+@mixin text-style($color, $font-size, $font-weight) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+//  #2. 중첩으로 '부모-자식' 표현 가능함
+//    ㄴ 아래 .red, .orange .yellow 는 SassComponent.js 파일 내 container 안의 div 임
+.container {
+    display: flex;
+    .box {
+        // 사이즈 지정 그냥 일반적인 css 일때
+        // width: 100px;
+        // height: 100px;
+
+        // #4-2. 믹스인 호출(사용)하여 box 사이즈 지정해줌
+        @include box(150px);
+
+        // & : 부모 선택자를 참조해서 치환한 것
+        //  따라서 아래 "&.red = .box.red" 와 동일
+        &.red {
+            background-color: $color-first;
+
+            // #4-3. 여러개 인자 일 때 사용하기-1
+            @include text-style(blue, -20px, bold);
+        }
+        &:hover {
+            background-color: pink;
+
+            // #3. 연산 및 애니메이션 가능
+            //아래 $box-animation : 변수 지정한 후 위에 것 적용
+            $box-animation: $animation-duration * 5; //연산도 가능함
+            transform: translateY(20px);
+            transition: transform $box-animation;
+        }
+        &.orange {
+            background-color: $color-second;
+            // #4-3. 여러개 인자 일 때 사용하기-2
+            @include text-style(pink, 25px, normal);
+        }
+        &.yellow {
+            background-color: $color-third;
+        }
+    }
+}
+
+.btn {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.btn-primary {
+    // #5. 상속하기 (기존 선택자 스타일을 다른 선택자에 상속하기. ex) 위의 .btn 스타일 상속하기
+    @extend.btn; // 상속받아옴
+    background-color: blue;
+    color: white;
+}
+
+// #6. 문자열 보간 방법
+/// 구문 : #{$~} {~} --> 이 구문을 사용하여 표현식, 변수의 값을 문자열 내에 삽입하여 동적으로 생성하는 방법임.
+@media (max-width: $breakpoint-sm) {
+    // @media (max-width: 360px)
+    .container {
+        flex-direction: column;
+    }
+}
