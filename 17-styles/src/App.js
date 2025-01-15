@@ -1,5 +1,6 @@
 import BasicCss from './components/BasicCss';
 import CssModuleComponents from './components/CssModuleComponents';
+import PracReactStyle from './components/PracReactStyle';
 import SassComponent from './components/SassComponent';
 import StyledComponent from './components/StyledComponent';
 
@@ -12,6 +13,9 @@ function App() {
             <hr />
             <br />
             <StyledComponent></StyledComponent>
+            <hr />
+            <br />
+            <PracReactStyle></PracReactStyle>
         </div>
     );
 }
