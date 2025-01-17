@@ -1,0 +1,11 @@
+.Main {
+    background-color: #ddd;
+}
+.Main.Dark {
+    background-color: black;
+    color: #fff;
+}
+.Main.Light {
+    background-color: #ddd;
+    color: black;
+}
