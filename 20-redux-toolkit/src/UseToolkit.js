@@ -64,6 +64,8 @@ const Box4 = () => {
             <button onClick={() => dispatch(plus())}>Plus</button>
             <button onClick={() => dispatch(minus())}>Minus</button>
             <button onClick={() => dispatch(amount(5))}>Amount</button>
+
+            {/* 초기값을 ture로 두었기 때문에 '참' 부터 나옴 */}
             <h2>isVisible 값은 "{isVisible ? '참' : '거짓'}"이다.</h2>
             <button onClick={() => dispatch(change())}>change</button>
         </div>

@@ -3,7 +3,7 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from './counterSlice'; // counterReducer 변수명으로 자유롭게 정할 수 있음
-import isVisibleReducer from './isVisibleSlice';
+import isVisibleReducer from './isVisibleSlice'; // isVisibleReducer 라는 변수명을 자유롭게 설정하고 /isVisibleSlice 파일에서 가져왔다는 의미임.
 
 /** configureStore
  *  - store 생성
