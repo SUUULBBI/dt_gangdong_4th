@@ -1,0 +1,6 @@
+//패키지 먼저 설치하기 : npm i sass (*버전다운으로 해야한다고 함)
+
+.completed {
+    text-decoration: line-through; // 취소선 긋기
+    color: gray; // 완료된 항목 색상 변경
+}
